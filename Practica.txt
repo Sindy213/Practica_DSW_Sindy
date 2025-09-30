@@ -1,0 +1,61 @@
+/**fun main() {
+    //Arreglo definido
+    val numbers = arrayOf(1,2,3,4)
+   
+   //Arreglo nulos
+   val numbersNull: Array<Int?> = arrayOfNulls(4)
+   //Asignar los valores a array null
+   //Los valores deben ser para las posiciones
+   //0=2;1=3;2=0
+   //NumbersNull[0]=2
+   //numbersNull[0] = 2
+   //numbersNull[1] = 3
+   //numbersNull[2] = 0
+   
+   for( i in numbers.indices){
+       if(i == 0)
+         numbersNull[i] = 2
+       println("Indice: $i, Valor = ${numbersNull[i]}")
+       
+       
+     //Notas
+     val notas = arrayOf(1,2,3,4,5)
+     
+       val notasNull: Array<Int?> = arrayOfNulls(5)
+       
+       for( i in notas.indices){
+       if(i == 0)
+         notasNull[i] = 2
+       println("Indice: $i, Valor = ${notasNull[i]}")
+       
+   }
+   
+   
+}**/
+
+//Promedio de Calificaciones
+//Guardar en un arreglo las notas de 5 estudiantes
+//Calcular el promedio usando Bucle
+
+fun main() {
+    // Arreglo definido con 5 notas
+    val notas = arrayOf(8, 7, 9, 6, 10)
+
+    // Arreglo nulo para almacenar las notas
+    val notasNull: Array<Int?> = arrayOfNulls(5)
+
+    // Asignar las notas al arreglo nulo usando un ciclo
+    for (i in notas.indices) {
+        notasNull[i] = notas[i]
+        println("Índice: $i, Nota = ${notasNull[i]}")
+    }
+
+    // Calcular el promedio de las notas
+    var suma = 0
+    for (i in notas.indices) {
+        suma += notasNull[i] ?: 0  // si fuera null, suma 0
+    }
+    val promedio = suma.toDouble() / notas.size
+
+    println("El promedio de las notas es: $promedio")
+}
