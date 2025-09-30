@@ -1,0 +1,17 @@
+//Hacer un codigo que permita guardar una lista de los numeros
+//pares entre 1 y 100
+
+fun main() {
+    // Creamos una lista mutable vacía de enteros
+    val numerosPares = mutableListOf<Int>()
+
+    // Recorremos los números del 1 al 100
+    for (i in 1..100) {
+        if (i % 2 == 0) { // condición para saber si es par
+            numerosPares.add(i) // agregamos a la lista mutable
+        }
+    }
+
+    // Mostramos el contenido de la lista
+    println("Números pares entre 1 y 100: $numerosPares")
+}
